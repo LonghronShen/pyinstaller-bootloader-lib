@@ -17,6 +17,8 @@ extern "C" {
 #include <pyi_utils.h>
 }
 
+#include <sprintor/interop/memory.hpp>
+
 namespace pyinstaller {
 namespace bootloader {
 
@@ -48,7 +50,7 @@ void inline set_process_name() {
 }
 
 inline FILE *make_fp_from_buffer(void *buffer, std::size_t buffer_length) {
-  return nullptr;
+  return sprintor::interop::memory::fmemopen(buffer, buffer_length, "r");
 }
 
 int run_from_buffer(void *buffer, std::size_t buffer_length, std::int32_t argc,

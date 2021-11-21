@@ -45,3 +45,4 @@ cmake-build-debug/
 .vs
 
 .ci_env*
+.DS_Store

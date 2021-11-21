@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
 #if _WIN32
   std::string exe_path = "./executable-loader-test-1.exe";
 #else
-  std::string exe_path = "./executable-loader-test-1";
+  std::string exe_path = "./main";
 #endif
 
   std::vector<std::string> args;
